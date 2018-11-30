@@ -17,7 +17,7 @@ $(document).ready(function() {
         q3(q3Result);
         q4(q4Result);
         
-        
+        $(".result").html();
         
         
         function q1(answer)
