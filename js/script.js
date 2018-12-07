@@ -16,8 +16,13 @@ $(document).ready(function() {
         q2(q2Result);
         q3(q3Result);
         q4(q4Result);
+        per(totalScore, name);
         
-        $(".result").html();
+        $("button").click(function()
+        {
+            $(".result").html(percentage);
+        });
+        
         
         
         function q1(answer)
@@ -54,7 +59,7 @@ $(document).ready(function() {
         
         function q3(answer)
         {
-            if(answer == "december")
+            if(answer == "winter")
             {
                 totalScore += 25;
             }
@@ -93,13 +98,23 @@ $(document).ready(function() {
         }
         
         
-        function per(total)
+        function per(total, name)
         {
             if(total == 100)
             {
-                percentage += "You are " + totalScore + "% like me";
-                
-                
+                percentage += "Congrants " + name + " You are " + total + "% like me";
+            }
+            else if(total >= 75)
+            {
+                percentage += "Congrants " + name + " You are " + total + "% like me";
+            }
+            else if(total >= 50)
+            {
+                percentage += "Congrants " + name + " You are " + total + "% like me";
+            }
+            else if(total >= 25)
+            {
+                percentage += "Congrants " + name + " You are " + total + "% like me";
             }
         }
     });
