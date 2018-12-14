@@ -20,7 +20,9 @@ $(document).ready(function() {
         
         $("button").click(function()
         {
-            $(".result").html(percentage);
+            $("#result").html(percentage);
+            $("#result").addClass("bounce");
+            $(".result").append('<img width = "200px" src = "https://pm1.narvii.com/7000/ac6fe312cb3823168f5925994914e61b74b37e0er1-1016-1102v2_hq.jpg" />');
         });
         
         
